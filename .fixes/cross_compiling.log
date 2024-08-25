@@ -1,0 +1,84 @@
+# target add
+cryptfox@mintusb:~/Development/offsec_rust/shellcode_local_inject$ rustup target add x86_64-pc-windows-gnu
+info: component 'rust-std' for target 'x86_64-pc-windows-gnu' is up to date
+
+# mingw
+cryptfox@mintusb:~/Development/offsec_rust/shellcode_local_inject$ sudo apt install mingw-w64
+[sudo] password for cryptfox:       
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+mingw-w64 is already the newest version (8.0.0-1).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+
+
+   Compiling windows_x86_64_gnu v0.52.5
+error: linking with `cc` failed: exit status: 1
+  |
+  = note: LC_ALL="C" PATH="/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/bin:/home/cryptfox/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin" VSLANG="1033" "cc" "-m64" "/tmp/rustc73rogo/symbols.o" "/home/cryptfox/Development/offsec_rust/shellcode_local_inject/target/debug/build/windows_x86_64_gnu-b95d67b56c4c4618/build_script_build-b95d67b56c4c4618.build_script_build.8855ce1db8ff6102-cgu.0.rcgu.o" "/home/cryptfox/Development/offsec_rust/shellcode_local_inject/target/debug/build/windows_x86_64_gnu-b95d67b56c4c4618/build_script_build-b95d67b56c4c4618.47bumnhx5v9l188l.rcgu.o" "-Wl,--as-needed" "-L" "/home/cryptfox/Development/offsec_rust/shellcode_local_inject/target/debug/deps" "-L" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib" "-Wl,-Bstatic" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-d2ef02247056996e.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-fde67f6c4eccaa42.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libobject-2549d0ec992a5666.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libmemchr-bb9bfc0931d5cad0.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libaddr2line-7c0b91fdc4adc2c5.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgimli-6ec164769e6c2957.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_demangle-95326caaef561554.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_detect-704dba0df3717bb7.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libhashbrown-5f0117cb69112303.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_alloc-7a95907f1ed0cea5.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libminiz_oxide-d4aa666f8242aefc.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libadler-9abec8861e966bc7.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-863ac378b60eeb30.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcfg_if-fc8aa5b7d220f0a9.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-0cc850f1e941238d.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-f7b445210e88e768.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_core-f37052492751c579.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-fd15ec7f305d48e7.rlib" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-d700583125da6701.rlib" "-Wl,-Bdynamic" "-lgcc_s" "-lutil" "-lrt" "-lpthread" "-lm" "-ldl" "-lc" "-Wl,--eh-frame-hdr" "-Wl,-z,noexecstack" "-L" "/home/cryptfox/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib" "-o" "/home/cryptfox/Development/offsec_rust/shellcode_local_inject/target/debug/build/windows_x86_64_gnu-b95d67b56c4c4618/build_script_build-b95d67b56c4c4618" "-Wl,--gc-sections" "-pie" "-Wl,-z,relro,-z,now" "-nodefaultlibs"
+  = note: /usr/bin/ld: cannot find Scrt1.o: No such file or directory
+          /usr/bin/ld: cannot find crti.o: No such file or directory
+          collect2: error: ld returned 1 exit status
+          
+
+error: could not compile `windows_x86_64_gnu` (build script) due to 1 previous error
+cryptfox@mintusb:~/Development/offsec_rust/shellcode_local_inject$ apt install libsqlite3-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libc-dev-bin libc-devtools libc6-dev libcrypt-dev libnsl-dev libtirpc-dev rpcsvc-proto
+Suggested packages:
+  glibc-doc sqlite3-doc
+The following NEW packages will be installed:
+  libc-dev-bin libc-devtools libc6-dev libcrypt-dev libnsl-dev libsqlite3-dev libtirpc-dev rpcsvc-proto
+0 upgraded, 8 newly installed, 0 to remove and 0 not upgraded.
+Need to get 3,440 kB of archives.
+After this operation, 18.9 MB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+Get:1 https://mirrors.nxtgen.com/ubuntu-mirror/ubuntu jammy-updates/main amd64 libc-dev-bin amd64 2.35-0ubuntu3.8 [20.3 kB]
+Get:2 https://mirrors.nxtgen.com/ubuntu-mirror/ubuntu jammy-updates/main amd64 libc-devtools amd64 2.35-0ubuntu3.8 [28.9 kB]
+Get:3 https://mirrors.nxtgen.com/ubuntu-mirror/ubuntu jammy/main amd64 libcrypt-dev amd64 1:4.4.27-1 [112 kB]
+Get:4 https://mirrors.nxtgen.com/ubuntu-mirror/ubuntu jammy/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu6 [68.5 kB]
+Get:5 https://mirrors.nxtgen.com/ubuntu-mirror/ubuntu jammy-updates/main amd64 libtirpc-dev amd64 1.3.2-2ubuntu0.1 [192 kB]
+Get:6 https://mirrors.nxtgen.com/ubuntu-mirror/ubuntu jammy/main amd64 libnsl-dev amd64 1.3.0-2build2 [71.3 kB]
+Get:7 https://mirrors.nxtgen.com/ubuntu-mirror/ubuntu jammy-updates/main amd64 libc6-dev amd64 2.35-0ubuntu3.8 [2,100 kB]
+Get:8 https://mirrors.nxtgen.com/ubuntu-mirror/ubuntu jammy-updates/main amd64 libsqlite3-dev amd64 3.37.2-2ubuntu0.3 [846 kB]
+Fetched 3,440 kB in 1s (6,709 kB/s)     
+Selecting previously unselected package libc-dev-bin.
+(Reading database ... 579424 files and directories currently installed.)
+Preparing to unpack .../0-libc-dev-bin_2.35-0ubuntu3.8_amd64.deb ...
+Unpacking libc-dev-bin (2.35-0ubuntu3.8) ...
+Selecting previously unselected package libc-devtools.
+Preparing to unpack .../1-libc-devtools_2.35-0ubuntu3.8_amd64.deb ...
+Unpacking libc-devtools (2.35-0ubuntu3.8) ...
+Selecting previously unselected package libcrypt-dev:amd64.
+Preparing to unpack .../2-libcrypt-dev_1%3a4.4.27-1_amd64.deb ...
+Unpacking libcrypt-dev:amd64 (1:4.4.27-1) ...
+Selecting previously unselected package rpcsvc-proto.
+Preparing to unpack .../3-rpcsvc-proto_1.4.2-0ubuntu6_amd64.deb ...
+Unpacking rpcsvc-proto (1.4.2-0ubuntu6) ...
+Selecting previously unselected package libtirpc-dev:amd64.
+Preparing to unpack .../4-libtirpc-dev_1.3.2-2ubuntu0.1_amd64.deb ...
+Unpacking libtirpc-dev:amd64 (1.3.2-2ubuntu0.1) ...
+Selecting previously unselected package libnsl-dev:amd64.
+Preparing to unpack .../5-libnsl-dev_1.3.0-2build2_amd64.deb ...
+Unpacking libnsl-dev:amd64 (1.3.0-2build2) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../6-libc6-dev_2.35-0ubuntu3.8_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.35-0ubuntu3.8) ...
+Selecting previously unselected package libsqlite3-dev:amd64.
+Preparing to unpack .../7-libsqlite3-dev_3.37.2-2ubuntu0.3_amd64.deb ...
+Unpacking libsqlite3-dev:amd64 (3.37.2-2ubuntu0.3) ...
+Setting up libtirpc-dev:amd64 (1.3.2-2ubuntu0.1) ...
+Setting up rpcsvc-proto (1.4.2-0ubuntu6) ...
+Setting up libnsl-dev:amd64 (1.3.0-2build2) ...
+Setting up libcrypt-dev:amd64 (1:4.4.27-1) ...
+Setting up libc-dev-bin (2.35-0ubuntu3.8) ...
+Setting up libc-devtools (2.35-0ubuntu3.8) ...
+Setting up libc6-dev:amd64 (2.35-0ubuntu3.8) ...
+Setting up libsqlite3-dev:amd64 (3.37.2-2ubuntu0.3) ...
+Processing triggers for man-db (2.10.2-1) ...
+cryptfox@mintusb:~/Development/offsec_rust/shellcode_local_inject$ cargo check --target=x86_64-pc-windows-gnu
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.01s

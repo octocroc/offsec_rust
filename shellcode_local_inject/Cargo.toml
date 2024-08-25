@@ -1,0 +1,16 @@
+[package]
+name = "shellcode_local_inject"
+version = "0.1.0"
+edition = "2021"
+
+# Some opsec tweaks. Refer to https://github.com/trickster0/OffensiveRust#compiling-the-examples-in-this-repo
+[profile.release]
+strip = "symbols"
+panic = "abort"
+# Commenting out trim-path since it's causing warnings
+# trim-path = true
+opt-level = "z"
+lto = true
+
+[dependencies]
+windows-sys = { version = "0.52.0", features = ["Win32_Foundation", "Win32_Security", "Win32_System_Memory", "Win32_System_Threading"] }

@@ -1,0 +1,8 @@
+[package]
+name = "dynamicfuncload_local_inject"
+version = "0.1.0"
+edition = "2021"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3.5", features = ["winnt", "libloaderapi", "memoryapi", "processthreadsapi", "synchapi", "winbase", "handleapi"] }
+

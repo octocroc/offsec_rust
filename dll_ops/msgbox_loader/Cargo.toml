@@ -1,0 +1,8 @@
+[package]
+name = "msgbox_loader"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+libloading = "0.6"
+winapi = {version = "0.3", features = ["wincon", "winuser"]}

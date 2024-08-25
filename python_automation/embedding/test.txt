@@ -1,0 +1,3 @@
+// data
+embedshellcode = [ sh_code ]
+// data
